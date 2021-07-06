@@ -1,0 +1,13 @@
+body {
+    background-color:rgb(46, 46, 46);
+   margin: 5px;
+   background-image: url('https://jooinn.com/images/peaceful-background-2.jpg');
+    
+}
+p {
+    font-family: 'Dancing Script', cursive;
+    font-size:large;
+    border:black ridge;
+}
+
+
