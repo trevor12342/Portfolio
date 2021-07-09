@@ -1,0 +1,34 @@
+.dog {
+    border-bottom:black;
+    border-style:solid;
+}
+.container {
+    width:50%;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.tile {
+    width:23%;
+    padding:5%;
+}
+
+.right {
+    border-right: 1px solid black;
+}
+
+.bottom {
+    border-bottom: 1px solid black;
+}
+img {
+    width: 100px;
+}
+body {
+    background-image: url('https://thumbs.dreamstime.com/b/css-word-built-white-cubes-black-letters-background-145157497.jpg');
+   background-size:cover;
+   background-repeat:no-repeat;
+}
+html {
+    height: 100%
+  }
+  

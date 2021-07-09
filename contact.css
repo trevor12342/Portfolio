@@ -1,0 +1,17 @@
+.bar{
+   border-bottom:solid;
+    border-color:black;
+    margin: 10px;
+    padding: 10px;
+}
+body {
+    background-image: url('https://thumbs.dreamstime.com/b/javascript-concept-blue-background-blue-text-44066030.jpg');
+   background-size:cover;
+   background-repeat:no-repeat;
+}
+html {
+    height: 100%
+  }
+.email {
+    color:beige;
+}
