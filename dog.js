@@ -1,11 +1,11 @@
 var player = "O";
 var turnsTaken = 0;
 var gameIsOver = false;
-console.log("hi");
+
 
 function changePlayers(){
     //you write the code that goes in here
-    turnsTaken 	= turnsTaken +1;
+      turnsTaken 	= turnsTaken +1;
     if (player === "X") {
         player = "O";
     }
@@ -16,15 +16,53 @@ function changePlayers(){
 
 function performLogic(button, tile){
     //you write the code that goes in here
-    $(button).hide();
-    $(tile).html(player);
-    changePlayers();
+    if(gameIsOver === false){
+       	$(button).hide();
+    	$(tile).html(player);
+        checkHorizontal();
+        checkVertical();
+        checkDiagnol();
+    	changePlayers(); 
+        tieGame();
+    }
+   
+}
+function tieGame(){
+  if (turnsTaken > 8 && gameIsOver  ===false){
+      gameIsOver =true;
+      $("h1").text("tie");
+  }
+ 
+}
+
+function checkHorizontal(tileId1, tileId2, tileId3){
+   	winGame("#tile1", "#tile2", "#tile3"); 
+    winGame("#tile4", "#tile5", "#tile6"); 
+    winGame("#tile7", "#tile8", "#tile9");
+}
+function checkVertical(tileId1, tileId2, tileId3){
+	winGame("#tile1", "#tile4", "#tile7"); 
+    winGame("#tile2", "#tile5", "#tile8"); 
+    winGame("#tile3", "#tile6", "#tile9");
+
+}
+function checkDiagnol(tileId1, tileId2, tileId3){
+  	winGame("#tile1", "#tile5", "#tile9"); 
+    winGame("#tile3", "#tile5", "#tile7"); 
+}
+function winGame(tileId1, tileId2, tileId3 ){
+    if($(tileId1).html()=== player &&
+       $(tileId2).html()=== player &&
+       $(tileId3).html()=== player ) {
+       		$("h1").text(player + " wins " );
+        gameIsOver = true;
+    }
 }
 
 //in each of the click events below,
 //uncomment the function calls to performLogic
 
-$(document).ready(function() {
+
 $("#button1").click(function() {
     performLogic("#button1","#tile1");
 });
@@ -59,5 +97,4 @@ $("#button8").click(function() {
 
 $("#button9").click(function() {
     performLogic("#button9","#tile9");
-});
 });
