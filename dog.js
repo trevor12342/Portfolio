@@ -54,7 +54,7 @@ function winGame(tileId1, tileId2, tileId3 ){
     if($(tileId1).html()=== player &&
        $(tileId2).html()=== player &&
        $(tileId3).html()=== player ) {
-       		$("h1").text(player + " wins " );
+       		$("h3").text(player + " wins " );
         gameIsOver = true;
     }
 }
