@@ -321,6 +321,7 @@ body {
     flex: 70%;
     background-color: white;
     padding: 20px;
+
     
   }
   
@@ -337,4 +338,7 @@ body {
     text-align: center;
     background: #ddd;
   }
-  
+  .pic {
+    width: 30%;
+    height: auto;
+  }
